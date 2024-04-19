@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+  <PreFlow name="PreFlow">
+    <Request>
+      <Step>
+        <Name>OAS-test</Name>
+      </Step>
+    </Request>
+    <Response>
+    </Response>
+  </PreFlow>
+  <Flows>
+    <Flow name="CORS Flow">
+      <Description/>
+      <Request>
+        <Step>
+          <Name>Add  CORS</Name>
+        </Step>
+      </Request>
+      <Response/>
+      <Condition>(proxy.pathsuffix MatchesPath "/") and (request.verb = "OPTIONS")</Condition>
+    </Flow>
+  </Flows>
+  <PostFlow name="PostFlow">
+    <Request>
+    </Request>
+    <Response>
+      <Step>
+        <Name>ResponsePayload</Name>
+      </Step>
+    </Response>
+  </PostFlow>
+  <HTTPProxyConnection>
+    <BasePath>/helloworld</BasePath>
+  </HTTPProxyConnection>
+  <RouteRule name="noroute"/>
+</ProxyEndpoint>

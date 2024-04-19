@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<HTTPModifier continueOnError="false" enabled="true" name="ResponsePayload">
+  <DisplayName>ResponsePayload</DisplayName>
+  <Properties/>
+  <Set>
+    <Headers>
+      <Header name="user-agent">{request.header.user-agent}</Header>
+      <Header name="user-response">Hello World</Header>
+    </Headers>
+    <Path/>
+    <StatusCode>200</StatusCode>
+    <Verb>GET</Verb>
+  </Set>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="response"/>
+</HTTPModifier>
