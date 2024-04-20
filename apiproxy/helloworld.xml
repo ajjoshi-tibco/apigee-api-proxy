@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="3" name="helloworld">
+<APIProxy revision="2" name="helloworld">
   <DisplayName/>
-  <Description>helloworld proxy for provisioning flow</Description>
-  <CreatedAt>1713570897263</CreatedAt>
-  <LastModifiedAt>1713570897263</LastModifiedAt>
+  <Description>Sample API Proxy</Description>
+  <CreatedAt>1713572716375</CreatedAt>
+  <LastModifiedAt>1713574539173</LastModifiedAt>
   <BasePaths>/helloworld</BasePaths>
   <Policies>
-    <Policy>ResponsePayload</Policy>
-    <Policy>Add  CORS</Policy>
     <Policy>OAS-test</Policy>
   </Policies>
   <ProxyEndpoints>
@@ -17,7 +15,6 @@
     <Resource>oas://openapi.yaml</Resource>
   </Resources>
   <TargetEndpoints>
-    <TargetEndpoint>TargetEndpoint-1</TargetEndpoint>
-    <TargetEndpoint>TargetEndpoint-2</TargetEndpoint>
+    <TargetEndpoint>default</TargetEndpoint>
   </TargetEndpoints>
 </APIProxy>
